@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+body,
+button,
+input,
+h1,
+form,
+div,
+p {
+  margin: 0;
+  padding: 0;
+  font-size: 1.1rem;
+  font-family: "Work Sans", sans-serif;
+}
+
+input,
+textarea {
+  border: 2px solid black;
+  padding: 14px;
+  border-radius: 15px;
+  margin: 10px 0;
+}

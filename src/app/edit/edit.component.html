@@ -1,0 +1,33 @@
+<form #addForm="ngForm" (ngSubmit)="getEdit(addForm)" class="form-container">
+  <div class="form">
+    <p class="update-instructions">
+      Use the form below to update your profile.
+    </p>
+    <label for="name" class="name">Name</label>
+    <input
+      type="text"
+      name="name"
+      id="name"
+      [ngModel]="userProfile.name"
+      ngModel
+    />
+    <label for="contact" class="contact">Contact</label>
+    <input
+      type="text"
+      name="contact"
+      id="contact"
+      [ngModel]="userProfile.contact"
+      ngModel
+    />
+    <label for="bio" class="bio">Bio</label>
+    <textarea
+      name="bio"
+      id="bio"
+      cols="30"
+      rows="10"
+      [ngModel]="userProfile.bio"
+      ngModel
+    ></textarea>
+    <button class="update-btn">Update</button>
+  </div>
+</form>

@@ -1,0 +1,43 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form {
+  margin-top: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 400px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px 0px rgba(204, 204, 204, 1);
+}
+
+.update-instructions {
+  font-weight: 600;
+  color: #505355;
+  margin-bottom: 5px;
+}
+.name,
+.contact,
+.bio {
+  color: #1ecefd;
+  font-weight: 600;
+}
+
+.update-btn {
+  padding: 14px;
+  margin-top: 10px;
+  border-radius: 15px;
+  width: 100%;
+  background: #505355;
+  color: white;
+  font-weight: 800;
+  font-size: 1rem;
+  border: none;
+}
+
+.update-btn:hover {
+  background-color: #5becd8;
+}
