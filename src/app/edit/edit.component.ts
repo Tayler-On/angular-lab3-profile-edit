@@ -11,11 +11,14 @@ import { ProfileService } from '../profile.service';
   styleUrls: ['./edit.component.css'],
 })
 export class EditComponent implements OnInit {
+  //make a property to store the data from the service about the object
   userProfile!: UserProfile;
+
   constructor(private profileService: ProfileService, private router: Router) {}
 
   ngOnInit(): void {
-    this.userProfile = this.profileService.getProfile();
+    //pull info about the profile object from service on load
+    this.userProfile = this.profileService.getUserProfile();
   }
 
   getEdit = (form: NgForm): void => {
@@ -25,7 +28,10 @@ export class EditComponent implements OnInit {
       contact: form.form.value.contact,
       bio: form.form.value.bio,
     };
+    //call setUserProfile method from the service to set this objects info in the service to update the profile data
     this.profileService.setUserProfile(newObject);
+    //get rid of object and the above line and just use this if you want to make it shorter since the form is already an object; this only works if the object is exactly what you need it to be
+    // this.profileService.setUserProfile(form.form.value);
     this.router.navigate(['profile']);
   };
 }

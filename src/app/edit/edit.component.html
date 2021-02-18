@@ -1,3 +1,5 @@
+<!-- #addForm="ngForm" connects form to make it useable in the ts file/  (ngSubmit)="getEdit(addForm)"  is the submit listener that calls the method getEdit() which gets the data from the form for the method -->
+
 <form #addForm="ngForm" (ngSubmit)="getEdit(addForm)" class="form-container">
   <div class="form">
     <p class="update-instructions">
@@ -11,6 +13,7 @@
       [ngModel]="userProfile.name"
       ngModel
     />
+    <!--[ngModel]="userProfile.name" allows you to pre populate the form fields with the current info of the object which makes it easier to edit!!  -->
     <label for="contact" class="contact">Contact</label>
     <input
       type="text"
@@ -26,6 +29,7 @@
       cols="30"
       rows="10"
       [ngModel]="userProfile.bio"
+      class="bio-input"
       ngModel
     ></textarea>
     <button class="update-btn">Update</button>

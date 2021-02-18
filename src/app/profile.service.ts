@@ -12,11 +12,13 @@ export class ProfileService {
   };
   constructor() {}
 
-  getProfile = (): UserProfile => {
+  //if a component needs the object can call this method to get it
+  getUserProfile = (): UserProfile => {
     return this.userProfile;
   };
 
   setUserProfile = (userProfileData: UserProfile): void => {
+    //set old user equal to new user to overwrite old object
     this.userProfile = userProfileData;
   };
 }

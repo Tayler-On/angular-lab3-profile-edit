@@ -26,6 +26,10 @@
   font-weight: 600;
 }
 
+.bio-input {
+  font-size: 1.4rem;
+}
+
 .update-btn {
   padding: 14px;
   margin-top: 10px;
